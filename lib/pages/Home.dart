@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-import 'dart:async';
+
 
 class Home extends StatefulWidget {
   @override
@@ -14,6 +14,14 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: Text("Home"),
       ),
+      body: Builder(
+        builder: (BuildContext context){
+          return WebView(
+            initialUrl: 'https://gracenetwork.net/',
+            javascriptMode: JavascriptMode.unrestricted,
+          );
+        }
+      )
     );
 
   }
